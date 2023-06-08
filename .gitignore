@@ -1,3 +1,6 @@
 synap_labs_env/
 wandb/
 .env
+tasks.txt
+__pycache__/
+.vscode/

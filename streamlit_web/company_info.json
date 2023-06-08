@@ -1,0 +1,12 @@
+{
+  "wandb": {
+    "company_name": "Weights and Biases",
+    "company_desc": "A leading AI startup specializing in experiment tracking, data versioning, hyperparameter tuning, and much more.",
+    "existing_feature_list": "1. System and custom metrics logging\n2. Real-time experiment visualization\n3. Comparing different hyperparameter results\n4. Automated sweeps over different hyperparameters\n5. Shareability by creating reports\n6. Data version Control"
+  },
+  "langchain": {
+    "company_name": "Langchain",
+    "company_desc": "A young AI startup making it easier to use and connect Large Language Models (LLMs) to other tools such as Vector Database, Agents, Prompt Templates, and more.",
+    "existing_feature_list": "1. Models: A suite of pretrained LLMs\n2. Prompts: Templates for prompt engineering and prompt tuning\n3. Memory: Ability to connect LLMs to vector databases\n4. Indexes: Text splitters\n5. Chains: Chain multiple prompts and LLMs together\n6. Agents: Drives decision making processes using LLMs"
+  }
+}
