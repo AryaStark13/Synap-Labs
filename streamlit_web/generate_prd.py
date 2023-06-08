@@ -18,7 +18,7 @@ def generate_prd(company_name, company_desc, existing_feature_list, new_feature,
     )
 
     llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key=st.secrets["OPENAI_API_KEY"])
-    prompt_template = load_prompt("../prompt_templates/generate_prd_template.json")
+    prompt_template = load_prompt("prompt_templates/generate_prd_template.json")
 
     prompt = prompt_template.format(company_name=company_name, company_desc=company_desc,
                                     existing_feature_list=existing_feature_list, new_feature=new_feature, new_feature_desc=new_feature_desc)
@@ -31,7 +31,7 @@ def generate_prd(company_name, company_desc, existing_feature_list, new_feature,
         print(e.headers)
         return
 
-    with open(f"../generated_prds/{company_name}_prd_{new_feature}.md", "w") as f:
+    with open(f"generated_prds/{company_name}_prd_{new_feature}.md", "w") as f:
         f.write(output)
 
     wandb.finish()

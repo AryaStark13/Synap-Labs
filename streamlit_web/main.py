@@ -14,7 +14,7 @@ def get_prd(company_name, company_desc, existing_feature_list, new_feature, new_
     return output, total_time
 
 def get_company_info(company_name):
-    with open("./company_info.json", "r") as f:
+    with open("streamlit_web/company_info.json", "r") as f:
         company_info = json.load(f)[company_name]
 
     return company_info
