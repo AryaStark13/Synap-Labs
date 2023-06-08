@@ -7,6 +7,8 @@ import openai
 import streamlit as st
 
 def generate_prd(company_name, company_desc, existing_feature_list, new_feature, new_feature_desc, wandb_name):
+    wandb.login(key=st.secrets["WANDB_API_KEY"])
+
     wandb.init(
         project="generate_simple_prd",
         config={
