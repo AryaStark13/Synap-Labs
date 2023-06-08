@@ -27,7 +27,7 @@ def main():
     }
     # Create a dropdown selectbox
     dropdown_select = st.selectbox(
-        "Select an option:", ("Weights and Biases", "Langchain", "Other"))
+        "Select a Company:", ("Weights and Biases", "Langchain", "Other"))
 
     if dropdown_select == "Other":
         company_info = {
