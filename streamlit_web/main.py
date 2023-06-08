@@ -14,7 +14,7 @@ def get_prd(company_name, company_desc, existing_feature_list, new_feature, new_
     return output, total_time
 
 def get_company_info(company_name):
-    with open("company_info.json", "r") as f:
+    with open("./company_info.json", "r") as f:
         company_info = json.load(f)[company_name]
 
     return company_info
@@ -25,11 +25,10 @@ def main():
         "Weights and Biases": "wandb",
         "Langchain": "langchain",
     }
-
     # Create a dropdown selectbox
     dropdown_select = st.selectbox(
         "Select an option:", ("Weights and Biases", "Langchain", "Other"))
-    
+
     if dropdown_select == "Other":
         company_info = {
             "company_name": st.text_input("Company Name:"),
@@ -62,16 +61,21 @@ def main():
                            file_name=f"{company_name}_prd_{feature_name_input}.md", mime="text/markdown")
 
         if st.button("Edit PRD"):
-            while not st.button("Finished Editing"):
-                col1, col2 = st.columns(2)
-                with col1:
-                    st.text("Markdown Editor")
-                    st.session_state.edited_output = st.text_area(
-                        label="Markdown Editor", value=st.session_state.output, height=500, label_visibility="hidden")
-                with col2:
-                    st.text("Live Preview")
-                    st.markdown(st.session_state.edited_output,
-                                help="Generated PRD")
+            pass
+
+        if not st.button("Finish Editing"):
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.text("Markdown Editor")
+                st.session_state.edited_output = st.text_area(
+                    label="Markdown Editor", value=st.session_state.output, height=500, label_visibility="hidden")
+            with col2:
+                st.text("Live Preview")
+                st.markdown(st.session_state.edited_output,
+                            help="Generated PRD")
+            
+            st.session_state.output = st.session_state.edited_output
 
         st.markdown(st.session_state.edited_output, help="Generated PRD")
 

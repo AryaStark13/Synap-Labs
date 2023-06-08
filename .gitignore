@@ -4,3 +4,4 @@ wandb/
 tasks.txt
 __pycache__/
 .vscode/
+.streamlit/
