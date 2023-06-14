@@ -6,7 +6,7 @@ from wandb.integration.langchain import WandbTracer
 import openai
 import streamlit as st
 
-def generate_prd(company_name, company_desc, existing_feature_list, new_feature, new_feature_desc, wandb_name):
+def generate_prd_v2(company_name, company_desc, existing_feature_list, new_feature, new_feature_desc, wandb_name):
     wandb.login(key=st.secrets["WANDB_API_KEY"])
 
     wandb.init(
@@ -20,8 +20,8 @@ def generate_prd(company_name, company_desc, existing_feature_list, new_feature,
     )
 
     llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0, openai_api_key=st.secrets["OPENAI_API_KEY"])
-    prompt_template = load_prompt("prompt_templates/generate_prd_template.json") # For deployment
-    # prompt_template = load_prompt("../prompt_templates/generate_prd_template.json") # For local testing
+    prompt_template = load_prompt("prompt_templates/generate_prd_template_v2.json") # For deployment
+    # prompt_template = load_prompt("../prompt_templates/generate_prd_template_v2.json") # For local testing
 
     prompt = prompt_template.format(company_name=company_name, company_desc=company_desc,
                                     existing_feature_list=existing_feature_list, new_feature=new_feature, new_feature_desc=new_feature_desc)
@@ -34,8 +34,8 @@ def generate_prd(company_name, company_desc, existing_feature_list, new_feature,
         print(e.headers)
         return
 
-    with open(f"./generated_prds/{company_name}_prd_{new_feature}.md", "w") as f: # For deployment
-    # with open(f"../generated_prds/{company_name}_prd_{new_feature}.md", "w") as f: # For local testing
+    with open(f"./generated_prds/{company_name}_prd_{new_feature}_v2.md", "w") as f: # For deployment
+    # with open(f"../generated_prds/{company_name}_prd_{new_feature}_v2.md", "w") as f: # For local testing
         f.write(output)
 
     wandb.finish()
