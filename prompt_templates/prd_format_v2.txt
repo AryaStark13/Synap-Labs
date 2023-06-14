@@ -1,0 +1,59 @@
+You are a product manager at {company_name}.
+Company description: {company_desc} 
+These are the existing features in your product:
+{existing_feature_list}
+
+Now, you want to add the following new feature to this:
+{new_feature}
+Feature description: {new_feature_desc}
+
+Create a Product Requirement Document (PRD) to add this new feature in the following format. Each heading contains a description of what should be included in that section. nReturn your output in a markdown format to maintain consistency:
+
+1. What Are We Solving For?
+    Give the high-level reasoning for this proposal. What is the problem or opportunity we’re pursuing? Who is this for? What segments or personas are impacted?
+
+2. Why Does It Matter?
+    Why is this initiative big enough to matter to Customers? What data or studies do we have to support this? 
+
+3. What Does Success Look Like?
+    What is the primary metric you’ll use to gauge success of this initiative? What is the target lift/impact to this metric, over what time period?
+    What are the secondary metric(s) of success?
+
+4. Background
+    Include any necessary background research here, including data analysis, industry research, competitor analysis, quantitative or qualitative customer insights, etc.
+
+5. Known Constraints
+    Where applicable, lay out any constraints that must be taken into account when designing a solution. These constraints may related to usability (i.e. accessibility), time (seasonality), technology (platform capabilities or site performance), legal, and business guardrails. 
+
+6. Solution Proposal
+    Given the opportunity, the background, and the constraints, what are we proposing? List bullet points or insert sketches that describe the solution at a high level. If this initiative is successful, what will get better for the customers?
+
+7. Risks & Assumptions
+    What must we assume to be true in order for this initiative to be successful? What developments could cause this initiative to be unsuccessful? Risks include fraud/abuse potential, security…
+
+8. Target Customers
+>   8.1 Market
+        Detail the specific regions & countries which the Product Development Team needs to build a solution for? Where we can lean into opportunities? Where do we need to mitigate emergent risks?
+>   8.2 Audience Segments
+        List the unique customer audiences this solution needs to address uniquely. 
+
+9. User Experience
+>   9.1 User Flows
+        What screens, touch points or experiences that are being considered as part of this initiative? There may be several - and these may cross boundaries of products, experiences and user states. 
+
+10. High Level Use Cases: Fill it in the given format
+
+|    	| Name                                                       	| Description                                                                                                                                            	| PDT or Squad                                                                           	| Dependency?                                                                 	| Priority                                    	| Open Questions,  Notes & Discussions                                             	|
+|----	|------------------------------------------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------	|----------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------	|---------------------------------------------	|----------------------------------------------------------------------------------	|
+| Desc  | Give this use case a name. e.g. Order Lifecycle Management 	| Note: this is not a user story. User stories are much more detailed/granular views of use cases. They represent the requirements & definition of done. 	| Name the Product Development team or squad if you know who will work on this use case. 	| If this use case has a dependency, list the use case # on which it depends. 	| MUST HAVE SHOULD HAVE COULD HAVE WON'T HAVE 	| Important things team members should know / things you're working to figure out. 	|
+
+11. Rollout Approach
+    How will we execute this rollout? Big-bang or gradual scale-up? A/B test or launch-and-measure? 
+    Will the rollout happen in every market at once, or will markets ramp up one by one?
+    Be inclusive of other key Product Development Team members in having this discussion, in particular Data Analysts, Data Science and Business Ops, along with Developers.
+    Provide a comprehensive view into the Pros/Cons, what can/cannot be answered as a result, and reasoning behind the decision being made for the rollout approach. 
+
+12. Measuring Success
+    If A/B testing, describe the variants being tested, traffic allocations to each variant, and the KPIs being measured in the experiment. 
+    Describe the desired cadence of performance readouts and align with Analytics to ensure it’s covered.
+    As with the Rollout Approach section, please be sure to socialize this plan with your partners in Analytics, Data Science and Business Operations.

@@ -1,0 +1,34 @@
+"You are a product manager at {company_name}.
+Company description: {company_desc} 
+These are the existing features in your product:
+{existing_feature_list}
+
+Now, you want to add the following new feature to this:
+{new_feature}
+Feature description: {new_feature_desc}
+
+Create a Product Requirement Document (PRD) to add this new feature in the following format:
+
+1. Project Overview: An introduction to the project, its purpose, and the problem it aims to solve.
+
+2. Project Scope: A detailed description of what is included and excluded from the project.
+
+3. Functional Requirements: Specific features and functionalities that the project should deliver.
+
+4. Non-functional Requirements: Criteria related to performance, security, usability, scalability, etc.
+
+5. Use Cases: Detailed scenarios that describe how users will interact with the product.
+
+6. User Interface (UI) and User Experience (UX) Guidelines: Design principles and requirements for the user interface.
+
+7. Assumptions and Constraints: Factors or limitations that may impact the project's development or implementation.
+
+8. Technical Requirements: Any specific technologies, platforms, or infrastructure required for the project.
+
+9. Timeline and Milestones: A proposed schedule or timeline for the project, including key milestones and deliverables.
+
+10. Success Criteria: Criteria for evaluating the success of the project and how it aligns with the overall business goals.
+
+11. Customer analysis: An analysis of customers who would actually use this feature. 
+
+Return your output in a markdown format to maintain consistency.
