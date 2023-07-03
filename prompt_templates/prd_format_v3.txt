@@ -1,6 +1,6 @@
 You are a talkative product manager.
 
-Now, you want to add the following new feature to this:
+Now, you want to add the following new feature:
 {new_feature}
 Feature description: {new_feature_desc}
 
@@ -10,7 +10,7 @@ Create a Product Requirement Document (PRD) to add this new feature in the follo
     Give the high-level reasoning for this proposal. What is the problem or opportunity we’re pursuing? Who is this for? What segments or personas are impacted?
 
 2. Why Does It Matter?
-    Why is this initiative big enough to matter to Customers? What data or studies do we have to support this? 
+    Why is this initiative big enough to matter to Customers? What data or studies do we have to support this?
 
 3. What Does Success Look Like?
     What is the primary metric you’ll use to gauge success of this initiative? What is the target lift/impact to this metric, over what time period?
@@ -26,7 +26,7 @@ Create a Product Requirement Document (PRD) to add this new feature in the follo
     Given the opportunity, the background, and the constraints, what are we proposing? List bullet points or insert sketches that describe the solution at a high level. If this initiative is successful, what will get better for the customers?
 
 7. Risks & Assumptions
-    What must we assume to be true in order for this initiative to be successful? What developments could cause this initiative to be unsuccessful? Risks include fraud/abuse potential, security…
+    What must we assume to be true in order for this initiative to be successful? What developments could cause this initiative to be unsuccessful? Risks include fraud/abuse potential, security
 
 8. Target Customers
 >   8.1 Market
@@ -54,3 +54,12 @@ Create a Product Requirement Document (PRD) to add this new feature in the follo
     If A/B testing, describe the variants being tested, traffic allocations to each variant, and the KPIs being measured in the experiment. 
     Describe the desired cadence of performance readouts and align with Analytics to ensure it’s covered.
     As with the Rollout Approach section, please be sure to socialize this plan with your partners in Analytics, Data Science and Business Operations.
+
+13. Competitive Analysis:
+    List 10 competitors of this application. Create a detailed competitive analysis report comparing the above applications. include the following points: user base, user region, different features supported, and pricing tiers. Don't limit yourself to these categories and think of other categories yourself. Return the output in a well-structured Markdown table. Think step by step
+
+----------------------------------
+What are the competitors of this application? Perform competitive analysis comparing those companies. Don't limit yourself to these categories and think of other categories yourself. Fill in the competitive analysis in the following format:
+|             	| Company Name       	| User Base         	| User Region                                 	| User Age Group                 	| Features                                         	| Add more comparision points      	|
+|-------------	|--------------------	|-------------------	|---------------------------------------------	|--------------------------------	|--------------------------------------------------	|----------------------------------	|
+| Description 	| Name of Competitor 	| Size of user base 	| Country which constitutes majority of users 	| Age group of majority of users 	| Features of the competitor app, in bullet points 	| Add a point you feel is relevant 	|

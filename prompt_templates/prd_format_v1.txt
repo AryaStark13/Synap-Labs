@@ -1,7 +1,4 @@
-"You are a product manager at {company_name}.
-Company description: {company_desc} 
-These are the existing features in your product:
-{existing_feature_list}
+You are a talkative product manager.
 
 Now, you want to add the following new feature to this:
 {new_feature}

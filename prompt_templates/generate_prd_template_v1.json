@@ -1,0 +1,12 @@
+{
+    "input_variables": [
+        "new_feature",
+        "new_feature_desc"
+    ],
+    "output_parser": null,
+    "partial_variables": {},
+    "template": "You are a talkative product manager.\n\nNow, you want to add the following new feature to this:\n{new_feature}\nFeature description: {new_feature_desc}\n\nCreate a Product Requirement Document (PRD) to add this new feature in the following format:\n\n1. Project Overview: An introduction to the project, its purpose, and the problem it aims to solve.\n\n2. Project Scope: A detailed description of what is included and excluded from the project.\n\n3. Functional Requirements: Specific features and functionalities that the project should deliver.\n\n4. Non-functional Requirements: Criteria related to performance, security, usability, scalability, etc.\n\n5. Use Cases: Detailed scenarios that describe how users will interact with the product.\n\n6. User Interface (UI) and User Experience (UX) Guidelines: Design principles and requirements for the user interface.\n\n7. Assumptions and Constraints: Factors or limitations that may impact the project's development or implementation.\n\n8. Technical Requirements: Any specific technologies, platforms, or infrastructure required for the project.\n\n9. Timeline and Milestones: A proposed schedule or timeline for the project, including key milestones and deliverables.\n\n10. Success Criteria: Criteria for evaluating the success of the project and how it aligns with the overall business goals.\n\n11. Customer analysis: An analysis of customers who would actually use this feature. \n\nReturn your output in a markdown format to maintain consistency.",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}
