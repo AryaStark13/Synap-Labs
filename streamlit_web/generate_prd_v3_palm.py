@@ -19,7 +19,7 @@ def generate_prd_v3_palm(new_feature, new_feature_desc, wandb_name):
         name=wandb_name,
     )
 
-    llm = VertexAI(max_output_tokens=1024, project="synap-labs-390404")
+    llm = VertexAI(max_output_tokens=1024, project="synap-labs-390404", credentials=st.secrets["GOOGLE_APPLICATION_CREDENTIALS"])
     prompt_template = load_prompt("prompt_templates/generate_prd_template_v2.json") # For deployment
     # prompt_template = load_prompt("../prompt_templates/generate_prd_template_v3.json")  # For local testing
 
