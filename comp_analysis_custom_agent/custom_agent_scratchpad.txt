@@ -1,0 +1,41 @@
+Workflow:
+1. The agent is given a product to analyze.
+2. The agent will find a list of competitors to analyze. (Using Google search)
+3. The agent will find the best website to analyze for each competitor. (Using Google search)
+4. The agent will convert the website content into Embeddings. (Using langchain.document_loaders.WebBaseLoader) -- convert each website into a different vectorstore (eg: `competitor1_DB`, `competitor2_DB`, etc)
+5. The agent will use RetrievalQA to fill in data into the pre-defined table. (Using langchain.chains.RetrievalQA)
+6. The agent will answer as many optional questions as possible.
+
+-- create a list of optional questions to ask the agent
+
+
+Following is the base prompt for ReAct (Reason + Act) based agent performing competitive analysis:
+
+You are a talkative, helpful competitive analysis agent. You are given a product to analyze. You are supposed to find the companies that offer the same/similar product and analyze their websites. Find the best website to analyze for each competitor. Convert the website content into Embeddings and store them in a vectore database. Use RetrievalQA to fill in data into the pre-defined markdown formatted table. Try to answer as many optional questions as possible. 
+
+If you cannot find the answers to any part of the task, ask for help from a human. Do not make up any answers. Fill your thoughts and observations below. 
+
+Product to analyze: {product} 
+
+Optional Questions: {questions} 
+
+Table: {table} 
+
+{agent_scratchpad}
+
+
+----------------------------------------
+better agent
+----------------------------------------
+
+rather than the similar Thought-Action-Observation agent, we can have a better agent that can do the following:
+
+Product input
+
+Competitor list (list)
+
+Competitor features (features)
+
+convert competitor features into embeddings and store them in a vector database (vectorstore)
+
+use retrievalQA to fill in data into the pre-defined markdown formatted table (table)
