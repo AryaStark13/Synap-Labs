@@ -6,5 +6,9 @@
     "langchain": {
         "new_feature": "Model Training Wizard (MTW)",
         "new_feature_desc": " A user-friendly interface that guides users through the process of training their own custom language models. It would provide step-by-step instructions, dataset management tools, and performance evaluation metrics to help users create high-quality models tailored to their specific needs."
+    },
+    "dualcam": {
+        "new_feature": "Dual Camera Activation Button",
+        "new_feature_desc": "Enables users to capture photos from both front and back cameras simultaneously."
     }
 }
