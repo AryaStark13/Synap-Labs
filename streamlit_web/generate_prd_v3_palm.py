@@ -4,6 +4,10 @@ from langchain.prompts import PromptTemplate, load_prompt
 import wandb
 from wandb.integration.langchain import WandbTracer
 import streamlit as st
+from google.oauth2 import service_account
+
+account_info = dict(st.secrets["GOOGLE_APPLICATION_CREDENTIALS"])
+credentials = service_account.Credentials.from_service_account_info(account_info)
 
 
 def generate_prd_v3_palm(new_feature, new_feature_desc, wandb_name):
@@ -19,8 +23,10 @@ def generate_prd_v3_palm(new_feature, new_feature_desc, wandb_name):
         name=wandb_name,
     )
 
-    llm = VertexAI(max_output_tokens=1024, project="synap-labs-390404", credentials=dict(st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]))
-    prompt_template = load_prompt("prompt_templates/generate_prd_template_v2.json") # For deployment
+    llm = VertexAI(credentials=credentials, max_output_tokens=1024)
+    # llm = VertexAI(project="synap-labs-390404", location="us-central1", credentials=dict(
+    #     st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]), max_output_tokens=1024)
+    prompt_template = load_prompt("prompt_templates/generate_prd_template_v2.json")  # For deployment
     # prompt_template = load_prompt("../prompt_templates/generate_prd_template_v3.json")  # For local testing
 
     prompt = prompt_template.format(
