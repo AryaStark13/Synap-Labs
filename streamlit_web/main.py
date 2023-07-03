@@ -8,7 +8,7 @@ from generate_prd_v3_palm import generate_prd_v3_palm
 
 
 def get_prd(new_feature, new_feature_desc, prd_version):
-    wandb_name = f"{new_feature}_prd_{prd_version[0]+prd_version[-1]}"
+    wandb_name = f"{new_feature}_prd_{prd_version}"
     start_time = time.time()
     if prd_version == "Version 1":
         output = generate_prd_v1(new_feature, new_feature_desc, wandb_name)

@@ -33,9 +33,9 @@ def generate_prd_v3_palm(new_feature, new_feature_desc, wandb_name):
         print(e)
         return
 
-    with open(f"./generated_prds/{new_feature}_prd_v3_palm.md", "w") as f: # For deployment
-    # with open(f"../generated_prds/{new_feature}_prd_palm.md", "w") as f: # For local testing
-        f.write(output)
+    # with open(f"./generated_prds/{new_feature}_prd_v3_palm.md", "w") as f: # For deployment
+    # # with open(f"../generated_prds/{new_feature}_prd_palm.md", "w") as f: # For local testing
+    #     f.write(output)
 
     wandb.finish()
     return output
